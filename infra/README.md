@@ -31,7 +31,8 @@ Key variables:
 | `domain_name` / `subdomain` | Custom domain, optional (see above) |
 | `github_org` / `github_repo` | Repo allowed to assume the CI deploy role |
 | `create_github_oidc_provider` | Set `false` if the account already has a GitHub OIDC provider |
-| `db_*` | RDS sizing/engine version |
+| `db_engine_version` | PostgreSQL major version series; Terraform selects the latest available patch version in that series |
+| Other `db_*` | RDS sizing and configuration; database storage uses `gp3` |
 | `task_cpu` / `task_memory` / `desired_count` | ECS Fargate sizing |
 
 ## Outputs → GitHub secrets

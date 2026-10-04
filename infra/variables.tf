@@ -139,9 +139,9 @@ variable "db_username" {
 }
 
 variable "db_engine_version" {
-  description = "Postgres engine version on RDS."
+  description = "Postgres major version series on RDS; Terraform selects the latest available patch version in that series."
   type        = string
-  default     = "16.4"
+  default     = "16"
 }
 
 variable "db_instance_class" {
@@ -195,4 +195,3 @@ variable "github_oidc_subjects" {
   type        = list(string)
   default     = []
 }
-
