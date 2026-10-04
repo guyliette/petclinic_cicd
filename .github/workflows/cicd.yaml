@@ -2,7 +2,7 @@ name: CI/CD Pipeline - PetClinic
  
 on:
   push:
-    branches: [ dev ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -64,4 +64,4 @@ jobs:
         with:
           name: app-jar
           path: target/*.jar
-          retention-days: 1      
+          retention-days: 2      
